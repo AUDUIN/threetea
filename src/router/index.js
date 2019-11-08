@@ -18,7 +18,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/',  //首页
     name: 'home',
     components:{ 
       nav:Nav,
@@ -27,22 +27,22 @@ const routes = [
     alias:'/home'
   },
   {
-    path:'/login',
+    path:'/login',  //登录接口
     name: 'login',
     components:{
       nav:Nav,
       default:login
     }
   },
-  {
-    path:'/usercenter',
+  {                   
+    path:'/usercenter',  //用户中心
     name: 'usercenter',
     components:{
       nav:Nav,
       default:usercenter
     },
     beforeEnter: (to, from, next) => {
-      // ...
+      // 路由守卫，判断token是否存在或者是否正确
       let token = window.localStorage.getItem('token');
       if(token){
       $axios.get('http://localhost:3004/users/token/verify?token='+token).then((res)=>{
@@ -57,7 +57,7 @@ const routes = [
         next({path:'/login'});
       }
     },
-    children:[
+    children:[  //子路由
       {
         path:'/',
         components:{
@@ -80,7 +80,7 @@ const routes = [
     
   },
   {
-    path: '/commodity-list',
+    path: '/commodity-list',  //列表路由
     name: 'commodity-list',
     components: {
       nav:Nav,
@@ -88,7 +88,7 @@ const routes = [
     }
   },
   {
-    path: '/commodity-detail/:id',
+    path: '/commodity-detail/:id',  //详情页路由
     name: 'commodity-detail',
     components: {
       nav:Nav,
@@ -96,7 +96,7 @@ const routes = [
     }
   },
   {
-    path: '/shopping/cart',
+    path: '/shopping/cart',  
     name: 'cart',
     components: {
       nav:Nav,
