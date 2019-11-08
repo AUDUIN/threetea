@@ -8,8 +8,8 @@
             href="https://www.yestae.com/home"
             class="router-link-exact-active router-link-active"
           >
-            <i data-v-6b052896 class="icon-top"></i>
-            <span data-v-6b052896 title="大益茶业集团旗下自营电商平台" class="company-text">大益茶业集团旗下自营电商平台</span>
+            <!-- <i data-v-6b052896 class="icon-top"></i> -->
+            <span data-v-6b052896 title="大益茶业集团旗下自营电商平台" class="company-text">三茶茶业集团旗下自营电商平台</span>
           </a>
         </div>
         <div data-v-6b052896 class="fr right-text">
@@ -27,7 +27,7 @@
       <div data-v-6b052896 class="for-header-w">
         <div data-v-6b052896 class="w rel">
           <h1 data-v-6b052896 class="logo-title">
-            <a data-v-6b052896 href="https://www.yestae.com/home" class="logo"></a>
+            <!-- <a data-v-6b052896 href="https://www.yestae.com/home" class="logo"></a> -->
           </h1>
           <div data-v-6b052896 class="nav-lists">
             <ul data-v-6b052896 class="nav-list">
