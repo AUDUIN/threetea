@@ -88,9 +88,9 @@
        
         
         <div class="side-no-refund" v-if="a">
-          <span class="link-login">登录</span>后查看
+          <span class="link-login" @click="login">登录</span>后查看
           <br />没有账号？免费
-          <span class="link-login">注册</span>
+          <span class="link-login" @click="handleReg">注册</span>
         </div>
         <div class="side-no-refund"  v-else-if="dataCart.length==0">
           你的购物车还是空的
@@ -134,6 +134,9 @@ export default {
   methods: {
     login() {
       this.$router.push({ path: "/login" });
+    },
+    handleReg(){
+      this.$router.push({ path: "/reg" });
     },
     logout(){
       this.$router.push({ path: "/" });
